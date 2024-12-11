@@ -45,7 +45,7 @@ func main() {
 		fmt.Println(result[0])
 	} else {
 		for i, dayResult := range result {
-			fmt.Println("Part "+strconv.Itoa(i)+":", dayResult)
+			fmt.Println("Part "+strconv.Itoa(i+1)+":", dayResult)
 		}
 	}
 }
