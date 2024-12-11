@@ -9,8 +9,8 @@ import (
 type Day4 struct {
 }
 
-func (receiver *Day4) DayNumber() uint {
-	return 4
+func (receiver *Day4) DayNumber() float64 {
+	return 4.1
 }
 
 func (receiver *Day4) Run(inputData string) string {

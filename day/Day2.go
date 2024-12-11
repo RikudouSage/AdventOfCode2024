@@ -17,7 +17,7 @@ const (
 type Day2 struct {
 }
 
-func (receiver *Day2) DayNumber() uint {
+func (receiver *Day2) DayNumber() float64 {
 	return 2
 }
 

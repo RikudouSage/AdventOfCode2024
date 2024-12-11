@@ -29,8 +29,23 @@ func main() {
 		os.Exit(1)
 	}
 
-	day := dayPkg.DaysList.FindByNumber(uint(dayNumber))
-	result := day.Run(string(content))
+	days := dayPkg.DaysList.FindByNumber(uint(dayNumber))
+	if len(days) == 0 {
+		fmt.Println("Error: Day not found")
+		os.Exit(1)
+	}
 
-	fmt.Println(result)
+	result := make([]string, len(days))
+
+	for i, day := range days {
+		result[i] = day.Run(string(content))
+	}
+
+	if len(result) == 1 {
+		fmt.Println(result[0])
+	} else {
+		for i, dayResult := range result {
+			fmt.Println("Part "+strconv.Itoa(i)+":", dayResult)
+		}
+	}
 }

@@ -7,7 +7,7 @@ import (
 
 type Day3 struct{}
 
-func (receiver *Day3) DayNumber() uint {
+func (receiver *Day3) DayNumber() float64 {
 	return 3
 }
 
